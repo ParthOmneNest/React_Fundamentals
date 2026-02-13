@@ -1,5 +1,5 @@
 import "./TaskList.css"
-export const TaskList=({tasks,onToggle})=>{
+export const TaskList=({tasks,onToggle,onDelete})=>{
     const completedTasks=(tasks.filter((task)=>task.isCompleted)).length
     const totalTasks=tasks.length
     return(
@@ -12,8 +12,12 @@ export const TaskList=({tasks,onToggle})=>{
                         </p>
                         <p>{task.isCompleted ? "Completed ✅" : "Incompleted ⏳"}</p>
                     </div>
+                        <div>
+                            <button onClick={() => onToggle(task.id)}>Toggle</button>
+                            <button onClick={() => onDelete(task.id)}>Delete</button>
 
-                    <button onClick={() => onToggle(task.id)}>Toggle</button>
+                        </div>
+
                 </div>
             ))}
             <div className="stats">

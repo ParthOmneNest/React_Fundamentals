@@ -22,7 +22,9 @@ export const TaskForm = ()=>{
         setTasks((prev)=>[...prev,newTask])
         setInputValue('')
     }
-
+    const deleteTask=(id)=>{
+        setTasks((prev)=>(prev.filter(task=> task.id!=id)))
+    }
     const toggleTask=(id)=>{
         setTasks((prev)=>{
             const updatedTasks=[...prev]
@@ -50,6 +52,7 @@ export const TaskForm = ()=>{
             <TaskList
             tasks={tasks}
             onToggle={toggleTask}
+            onDelete={deleteTask}
             />
 
             <button type="submit">Add a Task</button> 

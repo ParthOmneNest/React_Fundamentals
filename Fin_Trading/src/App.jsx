@@ -14,10 +14,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Auth/>}/>
         <Route path='/dashboard' element={<Dashboard/>}/>
-
       </Routes>
-       {/* <Dashboard/> */}
-        
       </BrowserRouter>
     )
 }

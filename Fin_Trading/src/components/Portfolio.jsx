@@ -1,10 +1,17 @@
-export const Portfolio=({name,image,value,onBack})=>{
+import { CardWrapper } from "./Cards/CardWrapper"
+export const Portfolio=({data,onBack})=>{
     return(
         <>
           <h1>This is my current Portfolio</h1>
-          <img src={image} alt={name} />
-          <p>Name:{name}</p>
-          <p>Value:{value}</p>
+          {data.map((users)=>(
+            <CardWrapper key={users.id}
+            name={users.name}
+            image={users.image}
+            age={users.age}
+            value={users.value}
+            />
+          ))}
+          <br/>
           <button onClick={onBack}>Go Back To Home Page</button>
         </>
     )

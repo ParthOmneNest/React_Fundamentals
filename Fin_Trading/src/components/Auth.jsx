@@ -8,8 +8,21 @@ export const Auth=()=>{
     const [name,setName]=useState('')
     const [email,setEmail]=useState('')
     const [password,setPassword]=useState('')
+
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     const handleSubmit=(e)=>{
         e.preventDefault()
+
+        if(!regex.test(email)){
+            alert("Please enter a valid email address")
+            return
+        }
+
+        if(password.length<6){
+            alert("Password must be at least 6 characters long")
+            return
+        }
+
         if(isLogin){
             console.log('Login: ',{email,password})
             // setIsAuthenticated(true)

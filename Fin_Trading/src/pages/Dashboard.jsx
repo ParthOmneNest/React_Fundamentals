@@ -2,19 +2,15 @@ import { Footer } from "../components/Footer"
 import { Header } from "../components/Header"
 import { Portfolio } from "../components/Portfolio"
 import { useState } from "react"
+import { data } from "../utils/data"
 export const Dashboard=()=>{
     
       const [showPortFolio,setShowPortFolio]=useState(false)
-        const name="Parth"
-        const value=20000
-        const image=`https://robohash.org/${name}`
     
         if(showPortFolio){
           return (
             <Portfolio
-            name={name}
-            image={image}
-            value={value}
+            data={data}
             onBack={()=>setShowPortFolio(false)}
             />
           )
@@ -23,9 +19,8 @@ export const Dashboard=()=>{
         return(
           <>
             <Header/>
-            <img src={image} alt="" />
-            <p>Name:{name}</p>
-            <p>Value:{value}</p>
+            <h1>Dashboard</h1>
+
             <button onClick={()=>setShowPortFolio(true)}>Show PortFolio</button>
             <Footer/>
           </>

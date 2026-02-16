@@ -1,8 +1,5 @@
-import { Portfolio } from './components/Portfolio'
 import './App.css'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import { Maincontent } from './components/MainContent'
-import { useState } from 'react'
 import { Dashboard } from './pages/Dashboard'
 import { Auth } from './components/Auth'
 

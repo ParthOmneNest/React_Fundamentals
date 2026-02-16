@@ -2,6 +2,10 @@ import { useState } from "react"
 import { Dashboard } from "../pages/Dashboard"
 import { useNavigate } from "react-router-dom"
 
+import { GoogleLogin } from "@react-oauth/google";
+import { jwtDecode } from "jwt-decode";
+
+
 export const Auth=()=>{
     const [isLogin,setIsLogin]=useState(false)
 
@@ -38,7 +42,16 @@ export const Auth=()=>{
         setIsLogin(!isLogin)
     }
     const navigate=useNavigate()
-    
+    const onSuccess = (response) => {
+        const user = jwtDecode(response.credential);
+        console.log(user);
+        alert(`Welcome ${user.name}\nEmail: ${user.email}`)
+        navigate('/dashboard');
+      };
+      const onError = (error) => {
+          console.log(error);
+          alert("Google login failed")
+      };
     return(
         <>
             <h1>{isLogin?"Login":"SignUp"}</h1>
@@ -85,6 +98,8 @@ export const Auth=()=>{
                 {isLogin?"Don't have an account?":"Already have an account"}
             <button onClick={handleToggle}>{isLogin?"Signup":"Login"}</button>
             </p>
+            <p>Or Continue With Google</p>
+            <GoogleLogin onSuccess={onSuccess} onError={onError} />
             
         </>
     )

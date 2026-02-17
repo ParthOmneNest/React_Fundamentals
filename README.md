@@ -1,5 +1,4 @@
-Main Folder:- Fin_Trading folder
-- Assignment 1:-
+- Assignment 1:- Fin Trading Folder
 - - Implemented Google Auth from google console
 - - Added regex for email pattern
 - - Added Card functionaility using props

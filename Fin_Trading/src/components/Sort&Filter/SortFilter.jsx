@@ -1,5 +1,5 @@
 
-export const Filter=({sortBy,setSortBy})=>{
+export const SortFilter=({sortBy,setSortBy})=>{
 
   return (
     <div style={{ padding: '20px' }}>

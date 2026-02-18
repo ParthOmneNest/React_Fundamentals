@@ -1,6 +1,6 @@
-Low to High Logic
-(a,b)-> a.price - b.price => -ve
+Created Filtering for The products based on 
+1. categories
+2. in-stock or out-of-stock
 
-a->cheaper
-b->costly
-sort a.first
+Updated Sort&Filter folder with UI-sepcific files - CategoryFilter.jsx & InOutStockFilter.jsx
+and appended new functions implementing the filtering logic in Logic.js present in Logic folder

@@ -24,7 +24,7 @@ export const Dashboard=()=>{
         return(
           <>
             <Header/>
-            <img src={image} alt="" />
+            <img src={image} alt="" width={100} />
             <p>Name:{name}</p>
             <p>Value:{value}</p>
             <Products/>

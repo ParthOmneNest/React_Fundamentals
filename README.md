@@ -10,7 +10,7 @@
 - Added Filtering logic in Fin_trading folder as well
 - Created a new Groww_915 folder for new project containing an E-Commerce product fetch from fakestoreapi.com
 
-## Day4 learning on feature123 branch
+## Day4 
 - Learnt Advance Hooks( all codes in Advanced_Hooks folder)
 - Added wishList and searchbar in Groww_915 project
 - - used useContext hooks & local Storage for wishList

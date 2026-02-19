@@ -1,13 +1,24 @@
 import {useState, useEffect} from 'react'
 import { ProductCard } from './ProductCard'
+import { useWindowSize } from '../hooks/useWindowSize'
 
 export const ProductList=({onViewDetails,search})=>{
     const[products,setProducts]= useState([])
     const[loading,setLoading]= useState(false)
     const[error,setError]= useState(null)
     const[categories,setCategories]= useState([])
-    const[selectedCategory,setSelectedCategory]= useState('all')
+    const[selectedCategory,setSelectedCategory]= useState('all')    
 
+    // Added the useWindowSize hook here
+    const { width } = useWindowSize(); 
+
+  // Decide columns based on screen width
+  const getGridColumns = () => {
+    if (width < 480)  return '1fr'; 
+    else if(width>=480 && width<768) return '2fr 2fr'
+    else if(width>=768 && width<1024) return '2fr 2fr 2fr'
+    else return 'repeat(4,1fr)'
+  }
     // fetch categories
     useEffect(()=>{
         fetch('https://fakestoreapi.com/products/categories')

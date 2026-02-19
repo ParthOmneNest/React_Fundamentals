@@ -8,3 +8,9 @@
 
 ### Assignment 3:- Day3_18_02_26_Assignment Folder
 - Implemented API fetch from fakeapi.org GET req to fetch all users done here
+- 
+### Assignment 4:- Task done on the Groww_915 folder done on the main branch
+- Task 1:- Click "▼ Show Description" on any card → description appears
+Click "▲ Hide Description" → description collapses
+- Task 2:- scroll back button display only after 300px
+- Task 3:- resize the window based on different screens(Mobile,Tablet...)

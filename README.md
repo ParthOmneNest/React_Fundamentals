@@ -10,8 +10,12 @@
 - Added Filtering logic in Fin_trading folder as well
 - Created a new Groww_915 folder for new project containing an E-Commerce product fetch from fakestoreapi.com
 
-## Day4 
+## Day 4 
 - Learnt Advance Hooks( all codes in Advanced_Hooks folder)
 - Added wishList and searchbar in Groww_915 project
 - - used useContext hooks & local Storage for wishList
 - - used useRef hook for timeout of 500ms for showing searching... when typing on the search bar.
+
+## Day 5
+- Learnt TypeScript code present in Day5_Learning_TypeScript folder
+- Created a project in Product-Store folder useing TypeScript + React

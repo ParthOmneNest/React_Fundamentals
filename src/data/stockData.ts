@@ -1,0 +1,186 @@
+import type { Stock, Trade,Positions } from '../types/stock.types';
+export const positions: Positions[] = [
+    // --- Technology ---
+    {
+        id: 'p1',
+        symbol: 'AAPL',
+        Qty: 10,
+        Avg_Price: 185.50,
+        ltp: 264.58,
+        pnl: 790.80  // (264.58 - 185.50) * 10
+    },
+    {
+        id: 'p2',
+        symbol: 'NVDA',
+        Qty: 25,
+        Avg_Price: 145.00,
+        ltp: 189.82,
+        pnl: 1120.50 // (189.82 - 145.00) * 25
+    },
+    {
+        id: 'p3',
+        symbol: 'MSFT',
+        Qty: 8,
+        Avg_Price: 385.10,
+        ltp: 397.23,
+        pnl: 97.04   // (397.23 - 385.10) * 8
+    },
+    {
+        id: 'p4',
+        symbol: 'META',
+        Qty: 12,
+        Avg_Price: 690.00,
+        ltp: 655.66,
+        pnl: 787.92  // (695.66 - 590.00) * 12
+    },
+    // --- Finance ---
+    {
+        id: 'p5',
+        symbol: 'JPM',
+        Qty: 20,
+        Avg_Price: 194.00,
+        ltp: 310.79,
+        pnl: 2335.80 // (310.79 - 194.00) * 20
+    },
+    {
+        id: 'p6',
+        symbol: 'V',
+        Qty: 15,
+        Avg_Price: 380.50,
+        ltp: 320.95,
+        pnl: 606.75  // (320.95 - 380.50) * 15
+    },
+    {
+        id: 'p7',
+        symbol: 'GS',
+        Qty: 5,
+        Avg_Price: 395.00,
+        ltp: 412.10,
+        pnl: 85.50   // (412.10 - 395.00) * 5
+    },
+    // --- Automotive ---
+    {
+        id: 'p8',
+        symbol: 'TSLA',
+        Qty: 5,
+        Avg_Price: 260.00,
+        ltp: 411.82,
+        pnl: 759.10  // (411.82 - 260.00) * 5
+    },
+    {
+        id: 'p9',
+        symbol: 'TM',
+        Qty: 30,
+        Avg_Price: 295.20,
+        ltp: 215.60,
+        pnl: 612.00  // (215.60 - 295.20) * 30
+    },
+    {
+        id: 'p10',
+        symbol: 'F',
+        Qty: 100,
+        Avg_Price: 10.50,
+        ltp: 12.15,
+        pnl: 165.00  // (12.15 - 10.50) * 100
+    }
+];
+
+
+
+
+export const stocks: Stock[] = [
+    // --- Technology ---
+    {
+        id: '1', symbol: 'AAPL', name: 'Apple Inc.',
+        price: 264.58, change: 2.15, changePct: 1.54,
+        volume: 42_070_000, marketCap: 3_880_000_000_000, sector: 'Technology'
+    },
+    {
+        id: '2', symbol: 'NVDA', name: 'NVIDIA Corp.',
+        price: 189.82, change: 1.92, changePct: 1.02,
+        volume: 178_420_000, marketCap: 4_610_000_000_000, sector: 'Technology'
+    },
+    {
+        id: '3', symbol: 'MSFT', name: 'Microsoft Corp.',
+        price: 397.23, change: 4.20, changePct: -0.31,
+        volume: 34_010_000, marketCap: 2_950_000_000_000, sector: 'Technology'
+    },
+    {
+        id: '4', symbol: 'GOOGL', name: 'Alphabet Inc.',
+        price: 314.98, change: -0.95, changePct: 4.01,
+        volume: 33_660_000, marketCap: 3_810_000_000_000, sector: 'Technology'
+    },
+    {
+        id: '5', symbol: 'META', name: 'Meta Platforms Inc.',
+        price: 655.66, change: 10.85, changePct: 1.69,
+        volume: 14_180_000, marketCap: 1_660_000_000_000, sector: 'Technology'
+    },
+    // --- Finance ---
+    {
+        id: '6', symbol: 'JPM', name: 'JPMorgan Chase',
+        price: 310.79, change: 1.05, changePct: 0.89,
+        volume: 7_790_000, marketCap: 838_210_000_000, sector: 'Finance'
+    },
+    {
+        id: '7', symbol: 'V', name: 'Visa Inc.',
+        price: 320.95, change: 2.01, changePct: 0.63,
+        volume: 6_830_000, marketCap: 611_730_000_000, sector: 'Finance'
+    },
+    {
+        id: '8', symbol: 'MA', name: 'Mastercard Inc.',
+        price: 524.40, change: 3.12, changePct: 0.60,
+        volume: 2_150_000, marketCap: 478_500_000_000, sector: 'Finance'
+    },
+    {
+        id: '9', symbol: 'BAC', name: 'Bank of America',
+        price: 48.25, change: -0.15, changePct: -0.31,
+        volume: 32_400_000, marketCap: 375_200_000_000, sector: 'Finance'
+    },
+    {
+        id: '10', symbol: 'GS', name: 'Goldman Sachs',
+        price: 412.10, change: 5.45, changePct: 1.34,
+        volume: 1_850_000, marketCap: 135_600_000_000, sector: 'Finance'
+    },
+    // --- Automotive ---
+    {
+        id: '11', symbol: 'TSLA', name: 'Tesla Inc.',
+        price: 411.82, change: -7.30, changePct: 0.03,
+        volume: 57_910_000, marketCap: 1_550_000_000_000, sector: 'Automotive'
+    },
+    {
+        id: '12', symbol: 'F', name: 'Ford Motor Co.',
+        price: 12.15, change: 0.08, changePct: 0.66,
+        volume: 45_200_000, marketCap: 48_500_000_000, sector: 'Automotive'
+    },
+    {
+        id: '13', symbol: 'GM', name: 'General Motors',
+        price: 45.30, change: -0.42, changePct: -0.92,
+        volume: 12_800_000, marketCap: 51_200_000_000, sector: 'Automotive'
+    },
+    {
+        id: '14', symbol: 'TM', name: 'Toyota Motor Corp.',
+        price: 215.60, change: 1.25, changePct: 0.58,
+        volume: 1_200_000, marketCap: 285_400_000_000, sector: 'Automotive'
+    },
+    {
+        id: '15', symbol: 'STLA', name: 'Stellantis N.V.',
+        price: 24.18, change: -0.12, changePct: -0.49,
+        volume: 4_300_000, marketCap: 74_200_000_000, sector: 'Automotive'
+    }
+];
+
+
+export const trades: Trade[] = [
+    {
+        id: 't1', stockId: '1', symbol: 'AAPL', type: 'BUY',
+        quantity: 10, price: 175.00, date: '2024-01-15'
+    },
+    {
+        id: 't2', stockId: '3', symbol: 'MSFT', type: 'BUY',
+        quantity: 5, price: 360.00, date: '2024-02-20'
+    },
+    {
+        id: 't3', stockId: '4', symbol: 'TSLA', type: 'SELL',
+        quantity: 8, price: 265.00, date: '2024-03-10'
+    },
+];
